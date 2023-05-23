@@ -18,6 +18,8 @@ jobs:
           cache: "npm"
       - name: Install dependencies 👨🏻‍💻
         run: npm ci
+      - name: Install wrangler 👨🏻‍💻
+        run: npm install -g wrangler
       - name: Build
         run: npm run build
       - name: Deploy
