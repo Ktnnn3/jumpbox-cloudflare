@@ -1,0 +1,7 @@
+[env.dev]
+name = "jumpbox-astro-cloudflare"
+compatibility_date = "2023-03-14"
+main = "dist/index.html"
+vars = { ENVIRONMENT = "dev", RUNTIMECONF = "helloworld" }
+workers_dev = true
+
