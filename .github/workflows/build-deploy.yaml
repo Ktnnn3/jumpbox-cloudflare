@@ -21,7 +21,4 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy
-        uses: cloudflare/wrangler-action@2.0.0
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: npx wrangler pages deploy dist/
+        run: npx wrangler pages deploy dist
