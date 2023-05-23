@@ -23,4 +23,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy
-        run: npx wrangler pages deploy dist
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: pages deploy "./dist" --project-name=jumpbox-astro-cloudflare
